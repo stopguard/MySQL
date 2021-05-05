@@ -1,4 +1,4 @@
-encode=utf8
+encode - utf8
 
 1. поставил mysql, залез в каталог ~, открыл в vim .my.cnf, прописал логпасс для утилиты mysql
 2. создал бд через 	CREATE DATABASE example;
