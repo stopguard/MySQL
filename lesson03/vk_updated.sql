@@ -124,6 +124,7 @@ CREATE TABLE posts (
   FOREIGN KEY (media_id) REFERENCES media(id)
 ) COMMENT "Посты пользователей";
 
+/* вариант 1 меньше таблиц, больше связей
 -- Таблица лайков
 CREATE TABLE likes (
   user_id INT UNSIGNED NOT NULL COMMENT "Ссылка на лайкнувшего пользователя",
@@ -134,4 +135,29 @@ CREATE TABLE likes (
   FOREIGN KEY (media_id) REFERENCES media(id),
   FOREIGN KEY (post_id) REFERENCES posts(id),
   FOREIGN KEY (liked_user_id) REFERENCES users(id)
+) COMMENT "Лайки пользователей";
+*/
+
+/* вариант 2 две таблицы, все первичные ключи в наличии, меньше столбов, но нет связей, должно работать лучше */
+
+-- Таблица типов контента
+CREATE TABLE liked_content (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT "Идентификатор строки",
+  content_type VARCHAR(30) NOT NULL COMMENT "Тип контента для лайков"
+) COMMENT "Типы контента, который можно лайкнуть";
+
+-- Её наполнение
+INSERT INTO liked_content (content_type) VALUES
+  ("media"),
+  ("post"),
+  ("user");
+ 
+-- Таблица лайков
+CREATE TABLE likes (
+  user_id INT UNSIGNED NOT NULL COMMENT "Ссылка на лайкнувшего пользователя",
+  content_type_id INT UNSIGNED NOT NULL COMMENT "Ссылка на тип контента",
+  content_id INT UNSIGNED NOT NULL COMMENT "Ссылка на лайкнутый контент",
+  PRIMARY KEY (user_id, content_type_id, content_id) COMMENT "Составной первичный ключ",
+  FOREIGN KEY (user_id) REFERENCES users(id),
+  FOREIGN KEY (content_type_id) REFERENCES liked_content(id)
 ) COMMENT "Лайки пользователей";
