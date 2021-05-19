@@ -151,10 +151,10 @@ INSERT INTO friendship_statuses (name) VALUES
   ("Reected")
 ;
 
-INSERT INTO friendship_statuses (name) VALUES
-  ("Requested"),
-  ("Confirmed"),
-  ("Rejected")
+INSERT INTO friendship_statuses (id, name) VALUES
+  (1, "Requested"),
+  (2, "Confirmed"),
+  (3, "Rejected")
   ON DUPLICATE KEY UPDATE name = VALUES (name)
 ;
 
