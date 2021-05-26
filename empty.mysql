@@ -1,0 +1,5 @@
+-- empty file to statistyc
+UPDATE catalogs JOIN products ON catalogs.id = products.catalog_id
+SET price = price * 0.9
+WHERE catalogs.name = "Мат.платы"
+;
