@@ -1,2 +1,2 @@
 *.vim linguist-documentation
-*.sql linguist-language=MySQL
+# *.sql linguist-language=MySQL
