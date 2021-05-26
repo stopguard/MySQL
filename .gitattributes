@@ -1,2 +1,2 @@
 * linguist-vendored
-*.MySQL linguist-vendored=false
+*.SQL linguist-vendored=false
