@@ -1,2 +1,2 @@
 * linguist-vendored
-*.SQL linguist-vendored=false
+*.sql linguist-vendored=false
