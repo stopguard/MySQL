@@ -1,2 +1,3 @@
 *.vim linguist-documentation
+*.sql linguist-vendored=false
 *.sql linguist-language=SQL
