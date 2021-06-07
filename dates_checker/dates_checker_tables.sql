@@ -90,12 +90,149 @@ CREATE TABLE change_log (
   operation VARCHAR(20) NOT NULL DEFAULT "INSERT" COMMENT "Тип изменений"
 ) ENGINE=Archive COMMENT "Лог изменений в списках выданного инструмента и удостоверений";
 
+-- 1-1
+DELIMITER //
+CREATE TRIGGER items_add_log AFTER INSERT ON items
+FOR EACH ROW
+BEGIN
+  INSERT INTO change_log (item_id, worker_id, item_type_id, last_check) 
+    SELECT 
+      NEW.id AS item_id,
+      NEW.worker_id AS worker_id,
+      NEW.item_type_id AS item_type_id,
+      NEW.last_check AS last_check;
+END//
+DELIMITER ;
 
--- НЕ ГОТОВО
+-- 2-1
+DELIMITER //
+CREATE TRIGGER items_update_log AFTER UPDATE ON items
+FOR EACH ROW
+BEGIN
+  INSERT INTO change_log (item_id, worker_id, item_type_id, last_check, operation) 
+    SELECT 
+      OLD.id AS item_id,
+      OLD.worker_id AS worker_id,
+      OLD.item_type_id AS item_type_id,
+      OLD.last_check AS last_check,
+      "UPDATE.OLD" AS operation;
+  INSERT INTO change_log (item_id, worker_id, item_type_id, last_check, operation) 
+    SELECT 
+      NEW.id AS item_id,
+      NEW.worker_id AS worker_id,
+      NEW.item_type_id AS item_type_id,
+      NEW.last_check AS last_check,
+      "UPDATE.NEW" AS operation;
+END//
+DELIMITER ;
+
+-- 3-1
+DELIMITER //
+CREATE TRIGGER items_delete_log AFTER DELETE ON items
+FOR EACH ROW
+BEGIN
+  INSERT INTO change_log (item_id, worker_id, item_type_id, last_check, operation) 
+    SELECT 
+      OLD.id AS item_id,
+      OLD.worker_id AS worker_id,
+      OLD.item_type_id AS item_type_id,
+      OLD.last_check AS last_check,
+      "DELETE" AS operation;
+END//
+DELIMITER ;
+
+-- 1-2
+DELIMITER //
+CREATE TRIGGER certificates_add_log AFTER INSERT ON certificates
+FOR EACH ROW
+BEGIN
+  INSERT INTO change_log (table_name, item_id, worker_id, item_type_id, last_check, last_attestation) 
+    SELECT 
+      "certificates" AS table_name,
+      NEW.id AS item_id,
+      NEW.worker_id AS worker_id,
+      NEW.certificate_type_id AS item_type_id,
+      NEW.give_date AS last_check,
+      NEW.last_attestation AS last_attestation;
+END//
+DELIMITER ;
+
+-- 2-2
+DELIMITER //
+CREATE TRIGGER certificates_update_log AFTER UPDATE ON certificates
+FOR EACH ROW
+BEGIN
+  INSERT INTO change_log (table_name, item_id, worker_id, item_type_id, last_check, last_attestation, operation) 
+    SELECT 
+      "certificates" AS table_name,
+      OLD.id AS item_id,
+      OLD.worker_id AS worker_id,
+      OLD.certificate_type_id AS item_type_id,
+      OLD.give_date AS last_check,
+      OLD.last_attestation AS last_attestation,
+      "UPDATE.OLD" AS operation;
+  INSERT INTO change_log (table_name, item_id, worker_id, item_type_id, last_check, last_attestation, operation) 
+    SELECT 
+      "certificates" AS table_name,
+      NEW.id AS item_id,
+      NEW.worker_id AS worker_id,
+      NEW.certificate_type_id AS item_type_id,
+      NEW.give_date AS last_check,
+      NEW.last_attestation AS last_attestation,
+      "UPDATE.NEW" AS operation;
+END//
+DELIMITER ;
+
+-- 3-2
+DELIMITER //
+CREATE TRIGGER certificates_delete_log AFTER DELETE ON certificates
+FOR EACH ROW
+BEGIN
+  INSERT INTO change_log (table_name, item_id, worker_id, item_type_id, last_check, last_attestation, operation) 
+    SELECT 
+      "certificates" AS table_name,
+      OLD.id AS item_id,
+      OLD.worker_id AS worker_id,
+      OLD.certificate_type_id AS item_type_id,
+      OLD.give_date AS last_check,
+      OLD.last_attestation AS last_attestation,
+      "DELETE" AS operation;
+END//
+DELIMITER ;
+
+DELIMITER //
+CREATE FUNCTION marker(last_check DATE, 
+                        last_interim_check DATE, 
+                        check_duration TINYINT UNSIGNED, 
+                        interim_check_duration TINYINT UNSIGNED
+                      )
+RETURNS CHAR(2) DETERMINISTIC
+BEGIN
+  DECLARE today DATE DEFAULT DATE(NOW());
+  DECLARE results TINYINT DEFAULT 0;
+  DECLARE next_check DATE DEFAULT DATE_ADD(last_check, INTERVAL check_duration MONTH);
+  DECLARE interim_next_check DATE DEFAULT DATE_ADD(last_interim_check, INTERVAL interim_check_duration MONTH);
+  DECLARE days_to_check INT;
+  IF (next_check > interim_next_check) THEN
+    SET days_to_check = DATEDIFF(today, interim_next_check);
+  ELSE
+    SET days_to_check = DATEDIFF(today, next_check);
+  END IF;
+  IF(days_to_check < 1) THEN
+    SET results = 3;
+  ELSEIF(days_to_check < 31) THEN
+    SET results = 2;
+  ELSEIF(days_to_check < 91) THEN
+    SET results = 1;
+  END IF;
+  RETURN results;
+END//
+DELIMITER ;
+
 CREATE VIEW summ_info_view AS
   SELECT b.worker_id AS brigadier_id,
       CONCAT(w2.name, " ", w2.patronymic, " ", w2.surname) AS brigadier_name,
-      "marker" AS marker,
+      marker(i.last_check, i.last_check, it.duration, it.duration) AS marker,
       i.worker_id AS worker_id,
       CONCAT(w.name, " ", w.patronymic, " ", w.surname) AS worker_name,
       "Инструмент" AS item_table, 
@@ -114,31 +251,43 @@ CREATE VIEW summ_info_view AS
         workers w2 ON b.worker_id = w.id
       JOIN
         item_types it ON i.item_type_id = it.id
-/*  UNION ALL
-    SELECT 
-      FROM 
-        "Удостоверение",
-        id,
-        worker_id,
-        certificate_types,
-        give_date,
-        last_attestation
-        FROM certificates c
-        JOIN 
-          workers w 
-        JOIN 
-          brigadiers b
-        JOIN
-          item_types it
-        JOIN
-          certificate_types ct*/
+  UNION ALL
+    SELECT b.worker_id,
+      CONCAT(w2.name, " ", w2.patronymic, " ", w2.surname),
+      marker(c.give_date, c.last_attestation, ct.change_duration, ct.attestation_duration),
+      c.worker_id,
+      CONCAT(w.name, " ", w.patronymic, " ", w.surname),
+      "Удостоверение", 
+      c.id,
+      c.give_date,
+      c.last_attestation,
+      DATE_ADD(c.give_date, INTERVAL ct.change_duration MONTH),
+      DATE_ADD(c.last_attestation, INTERVAL ct.attestation_duration MONTH)
+    FROM
+        certificates c 
+      JOIN 
+        workers w ON c.worker_id = w.id 
+      JOIN 
+        brigadiers b ON w.brigadier_id = b.id
+      JOIN 
+        workers w2 ON b.worker_id = w.id
+      JOIN
+        certificate_types ct ON c.certificate_type_id = ct.id 
 ;
-      
 
-
-
-
-
+CREATE VIEW workers_info_view AS 
+  SELECT d.name,
+      siv.worker_id,
+      siv.worker_name,
+      MAX(siv.marker) AS marker,
+      siv.brigadier_id,
+      siv.brigadier_name
+    FROM summ_info_view siv 
+      JOIN workers w ON siv.worker_id = w.id 
+      JOIN departaments d ON w.departament_id = d.id 
+    GROUP BY worker_id
+    ORDER BY worker_name
+;
 
 
 
