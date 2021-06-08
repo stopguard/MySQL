@@ -1,7 +1,11 @@
+/* RESET DATABASE */
+
 DROP DATABASE IF EXISTS dates_checker;
 CREATE DATABASE dates_checker;
 
 USE dates_checker;
+
+/* STRUCTURE */
 
 CREATE TABLE departaments (
   `id` SERIAL PRIMARY KEY COMMENT "Идентификатор подразделения",
@@ -90,7 +94,8 @@ CREATE TABLE change_log (
   operation VARCHAR(20) NOT NULL DEFAULT "INSERT" COMMENT "Тип изменений"
 ) ENGINE=Archive COMMENT "Лог изменений в списках выданного инструмента и удостоверений";
 
--- 1-1
+/* TRIGGERS */
+
 DELIMITER //
 CREATE TRIGGER items_add_log AFTER INSERT ON items
 FOR EACH ROW
@@ -102,10 +107,8 @@ BEGIN
       NEW.item_type_id AS item_type_id,
       NEW.last_check AS last_check;
 END//
-DELIMITER ;
 
 -- 2-1
-DELIMITER //
 CREATE TRIGGER items_update_log AFTER UPDATE ON items
 FOR EACH ROW
 BEGIN
@@ -124,10 +127,8 @@ BEGIN
       NEW.last_check AS last_check,
       "UPDATE.NEW" AS operation;
 END//
-DELIMITER ;
 
 -- 3-1
-DELIMITER //
 CREATE TRIGGER items_delete_log AFTER DELETE ON items
 FOR EACH ROW
 BEGIN
@@ -139,10 +140,8 @@ BEGIN
       OLD.last_check AS last_check,
       "DELETE" AS operation;
 END//
-DELIMITER ;
 
 -- 1-2
-DELIMITER //
 CREATE TRIGGER certificates_add_log AFTER INSERT ON certificates
 FOR EACH ROW
 BEGIN
@@ -155,10 +154,8 @@ BEGIN
       NEW.give_date AS last_check,
       NEW.last_attestation AS last_attestation;
 END//
-DELIMITER ;
 
 -- 2-2
-DELIMITER //
 CREATE TRIGGER certificates_update_log AFTER UPDATE ON certificates
 FOR EACH ROW
 BEGIN
@@ -181,10 +178,8 @@ BEGIN
       NEW.last_attestation AS last_attestation,
       "UPDATE.NEW" AS operation;
 END//
-DELIMITER ;
 
 -- 3-2
-DELIMITER //
 CREATE TRIGGER certificates_delete_log AFTER DELETE ON certificates
 FOR EACH ROW
 BEGIN
@@ -198,15 +193,15 @@ BEGIN
       OLD.last_attestation AS last_attestation,
       "DELETE" AS operation;
 END//
-DELIMITER ;
 
-DELIMITER //
+/* FUNCTIONS */
+
 CREATE FUNCTION marker(last_check DATE, 
                         last_interim_check DATE, 
                         check_duration TINYINT UNSIGNED, 
                         interim_check_duration TINYINT UNSIGNED
                       )
-RETURNS CHAR(2) DETERMINISTIC
+RETURNS TINYINT DETERMINISTIC
 BEGIN
   DECLARE today DATE DEFAULT DATE(NOW());
   DECLARE results TINYINT DEFAULT 0;
@@ -214,9 +209,9 @@ BEGIN
   DECLARE interim_next_check DATE DEFAULT DATE_ADD(last_interim_check, INTERVAL interim_check_duration MONTH);
   DECLARE days_to_check INT;
   IF (next_check > interim_next_check) THEN
-    SET days_to_check = DATEDIFF(today, interim_next_check);
+    SET days_to_check = DATEDIFF(interim_next_check, today);
   ELSE
-    SET days_to_check = DATEDIFF(today, next_check);
+    SET days_to_check = DATEDIFF(next_check, today);
   END IF;
   IF(days_to_check < 1) THEN
     SET results = 3;
@@ -227,7 +222,95 @@ BEGIN
   END IF;
   RETURN results;
 END//
+
+/* TEMPORARY PROCEDURES */
+
+CREATE PROCEDURE create_brigadiers()
+BEGIN
+  DECLARE i TINYINT DEFAULT 1;
+  WHILE i < 11 DO
+    INSERT INTO brigadiers(worker_id)
+      SELECT id
+        FROM workers
+        WHERE departament_id = i
+        ORDER BY RAND() 
+        LIMIT 1
+    ;
+    SET i = i + 1;
+  END WHILE;
+END//
+
+CREATE PROCEDURE set_brigadiers()
+BEGIN
+  DECLARE i TINYINT DEFAULT 1;
+  DECLARE b_id BIGINT;
+  WHILE i < 101 DO
+    SET b_id = (SELECT b.id
+        FROM brigadiers b 
+          JOIN workers w ON b.worker_id = w.id
+        WHERE departament_id = (SELECT departament_id FROM workers WHERE id = i)
+      );
+    UPDATE workers SET brigadier_id = b_id WHERE id = i;
+    SET i = i + 1;
+  END WHILE;
+END//
+
+CREATE PROCEDURE update_itemdates()
+BEGIN
+  DECLARE i SMALLINT DEFAULT 1;
+  DECLARE rnd TINYINT;
+  DECLARE new_val DATE DEFAULT NOW();
+  WHILE i < 301 DO
+    SET rnd = FLOOR(RAND() * 2);
+    IF rnd THEN
+      UPDATE items 
+        SET last_check = new_val
+        WHERE id = i
+      ;
+    END IF;
+    SET i = i + 1;
+  END WHILE;
+END//
+
+CREATE PROCEDURE update_certdates()
+BEGIN
+  DECLARE i SMALLINT DEFAULT 1;
+  DECLARE ch_duration TINYINT;
+  DECLARE at_duration TINYINT;
+  DECLARE last_at DATE;
+  DECLARE next_ch DATE;
+  DECLARE next_at DATE;
+  WHILE i < 301 DO
+    SET last_at = (SELECT last_attestation FROM certificates WHERE id = i);
+    SET ch_duration = (SELECT ct.change_duration FROM
+      certificates c JOIN certificate_types ct 
+        ON c.id = i AND c.certificate_type_id = ct.id);
+    SET at_duration = (SELECT ct.attestation_duration FROM
+      certificates c JOIN certificate_types ct 
+        ON c.id = i AND c.certificate_type_id = ct.id);
+    SET next_ch = DATE_ADD((SELECT give_date FROM certificates WHERE id = i), INTERVAL ch_duration MONTH);
+    SET next_at = DATE_ADD(last_at, INTERVAL at_duration MONTH);
+    IF (next_at > next_ch) THEN
+      UPDATE certificates 
+        SET give_date = last_at 
+        WHERE id = i;
+    END IF;
+    SET i = i + 1;
+  END WHILE;
+END//
+
+CREATE PROCEDURE add_alarms()
+BEGIN
+  DECLARE i SMALLINT DEFAULT 1;
+  INSERT INTO alarm_links (worker_id, chat_id) SELECT worker_id, chat_id FROM chat_ids;
+  WHILE i < 101 DO
+    INSERT IGNORE INTO alarm_links VALUES (FLOOR(RAND() * 101), FLOOR(RAND() * 1000000));
+    SET i = i + 1;
+  END WHILE;
+END//  
 DELIMITER ;
+
+/* VIEWS */
 
 CREATE VIEW summ_info_view AS
   SELECT b.worker_id AS brigadier_id,
@@ -237,19 +320,20 @@ CREATE VIEW summ_info_view AS
       CONCAT(w.name, " ", w.patronymic, " ", w.surname) AS worker_name,
       "Инструмент" AS item_table, 
       i.id AS item_id,
+      it.name AS item_name,
       i.last_check AS last_check,
       i.last_check AS last_interim_check,
       DATE_ADD(i.last_check, INTERVAL it.duration MONTH) AS next_check,
       DATE_ADD(i.last_check, INTERVAL it.duration MONTH) AS next_interim_check
     FROM
         items i
-      JOIN 
+      LEFT JOIN 
         workers w ON i.worker_id = w.id 
-      JOIN 
+      LEFT JOIN 
         brigadiers b ON w.brigadier_id = b.id
-      JOIN 
-        workers w2 ON b.worker_id = w.id
-      JOIN
+      LEFT JOIN 
+        workers w2 ON b.worker_id = w2.id
+      LEFT JOIN
         item_types it ON i.item_type_id = it.id
   UNION ALL
     SELECT b.worker_id,
@@ -259,43 +343,33 @@ CREATE VIEW summ_info_view AS
       CONCAT(w.name, " ", w.patronymic, " ", w.surname),
       "Удостоверение", 
       c.id,
+      ct.name,
       c.give_date,
       c.last_attestation,
       DATE_ADD(c.give_date, INTERVAL ct.change_duration MONTH),
       DATE_ADD(c.last_attestation, INTERVAL ct.attestation_duration MONTH)
     FROM
         certificates c 
-      JOIN 
+      LEFT JOIN 
         workers w ON c.worker_id = w.id 
-      JOIN 
+      LEFT JOIN 
         brigadiers b ON w.brigadier_id = b.id
-      JOIN 
-        workers w2 ON b.worker_id = w.id
-      JOIN
+      LEFT JOIN 
+        workers w2 ON b.worker_id = w2.id
+      LEFT JOIN
         certificate_types ct ON c.certificate_type_id = ct.id 
 ;
 
 CREATE VIEW workers_info_view AS 
-  SELECT d.name,
-      siv.worker_id,
-      siv.worker_name,
+  SELECT d.name AS departament,
+      worker_id,
+      ANY_VALUE(worker_name) AS name ,
       MAX(siv.marker) AS marker,
-      siv.brigadier_id,
-      siv.brigadier_name
+      w.brigadier_id AS brigadier_id,
+      ANY_VALUE(brigadier_name) AS brigadier_name
     FROM summ_info_view siv 
       JOIN workers w ON siv.worker_id = w.id 
-      JOIN departaments d ON w.departament_id = d.id 
+      JOIN departaments d ON w.departament_id = d.id
     GROUP BY worker_id
-    ORDER BY worker_name
+    ORDER BY departament, name
 ;
-
-
-
-
-
-
-
-
-
-
-

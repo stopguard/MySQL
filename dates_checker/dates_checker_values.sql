@@ -13,244 +13,147 @@ INSERT INTO `departaments` (`name`,`comment`) VALUES
   ("felis. Nulla","justo. Proin non massa")
 ;
 
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (3,"Huff","Remedios","Q");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (5,"Ferrell","Reese","M");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (7,"Barber","Aquila","K");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (6,"Sweet","Galvin","S");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (1,"Turner","Quail","P");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (7,"Talley","Armand","G");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (7,"Pickett","Allistair","R");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (5,"Robertson","Fuller","G");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (10,"Finley","Molly","U");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (6,"Cruz","Macey","M");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (8,"Jordan","Chloe","R");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (8,"Hardy","Tobias","P");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (7,"Rasmussen","Pearl","N");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (3,"Duffy","Ira","O");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (4,"Hansen","Flavia","Y");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (10,"William","Nolan","K");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (7,"Goodwin","Knox","F");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (2,"Gregory","Tanya","N");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (7,"Lang","Carly","A");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (3,"Clay","Sarah","G");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (8,"Lucas","Chaney","I");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (9,"Pennington","Ursa","T");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (9,"Dominguez","David","G");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (1,"Blanchard","Claudia","A");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (10,"Humphrey","Cameron","U");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (3,"Ware","Kirby","Q");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (3,"Villarreal","Hayden","E");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (2,"Gay","Garrison","A");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (10,"Dennis","Davis","O");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (6,"Riley","Christopher","I");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (5,"Holmes","Jared","L");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (2,"Sharpe","Maggy","E");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (5,"Marquez","Kylynn","A");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (3,"Cantrell","Velma","G");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (5,"Moody","Lewis","W");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (6,"Cooper","Sybill","Y");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (7,"Cherry","Leo","Y");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (9,"Nieves","Jacob","K");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (4,"Conley","Silas","S");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (10,"Manning","Carly","N");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (5,"Rios","Herrod","A");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (5,"Pitts","Madeline","I");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (7,"Riggs","Tanner","A");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (10,"Guerrero","Orlando","Y");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (10,"Dillard","Aristotle","U");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (1,"Adkins","Kylie","Q");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (5,"Delaney","Keane","M");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (9,"Whitehead","Madison","R");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (9,"Rodgers","Indigo","H");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (3,"Patel","Harper","I");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (1,"Bonner","Emerald","R");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (7,"Alvarado","Blaine","A");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (1,"Francis","Rowan","Y");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (3,"Hansen","Joshua","Z");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (3,"Richardson","Paloma","U");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (1,"Peters","Nina","C");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (6,"Logan","Aiko","A");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (7,"Gilbert","Karly","A");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (7,"Kelly","Eliana","I");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (5,"Walton","Dale","Q");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (6,"Klein","Vincent","P");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (4,"Neal","Belle","B");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (4,"Craig","Prescott","P");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (4,"Walls","Caleb","N");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (3,"Downs","Victor","R");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (5,"Villarreal","Chancellor","H");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (8,"Stuart","Maris","U");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (3,"Hewitt","Wallace","D");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (9,"Merrill","Stacy","Y");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (8,"Benson","Fitzgerald","W");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (6,"Fitzpatrick","Vance","C");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (3,"Bradley","Cynthia","J");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (6,"Logan","Buffy","V");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (2,"Barlow","Heidi","M");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (5,"Gordon","Natalie","Y");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (3,"Day","Sheila","L");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (5,"Coleman","Serena","R");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (9,"Solis","Byron","H");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (3,"Mcdowell","Malachi","W");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (1,"Boyer","Leo","J");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (4,"Armstrong","Grace","G");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (1,"Vaughn","Joelle","G");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (2,"Woods","Roth","H");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (7,"Guy","Teagan","O");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (2,"Robertson","Winter","M");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (4,"Gaines","Calvin","M");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (9,"Thompson","Wade","Z");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (3,"Finch","Gary","B");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (1,"Duffy","Ebony","Z");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (2,"Workman","Mariam","Z");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (10,"Roach","Hall","V");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (5,"Bush","Rigel","T");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (2,"Curry","Gay","B");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (1,"Mcintosh","Evan","O");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (4,"Chavez","Angela","H");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (5,"Holman","Noble","C");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (8,"Turner","Carl","S");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (6,"Cruz","Gannon","F");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (7,"Stein","Jael","H");
-INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronimyc`) VALUES (10,"Snyder","Austin","E");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (3,"Huff","Remedios","Q");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (5,"Ferrell","Reese","M");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (7,"Barber","Aquila","K");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (6,"Sweet","Galvin","S");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (1,"Turner","Quail","P");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (7,"Talley","Armand","G");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (7,"Pickett","Allistair","R");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (5,"Robertson","Fuller","G");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (10,"Finley","Molly","U");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (6,"Cruz","Macey","M");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (8,"Jordan","Chloe","R");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (8,"Hardy","Tobias","P");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (7,"Rasmussen","Pearl","N");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (3,"Duffy","Ira","O");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (4,"Hansen","Flavia","Y");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (10,"William","Nolan","K");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (7,"Goodwin","Knox","F");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (2,"Gregory","Tanya","N");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (7,"Lang","Carly","A");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (3,"Clay","Sarah","G");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (8,"Lucas","Chaney","I");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (9,"Pennington","Ursa","T");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (9,"Dominguez","David","G");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (1,"Blanchard","Claudia","A");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (10,"Humphrey","Cameron","U");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (3,"Ware","Kirby","Q");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (3,"Villarreal","Hayden","E");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (2,"Gay","Garrison","A");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (10,"Dennis","Davis","O");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (6,"Riley","Christopher","I");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (5,"Holmes","Jared","L");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (2,"Sharpe","Maggy","E");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (5,"Marquez","Kylynn","A");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (3,"Cantrell","Velma","G");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (5,"Moody","Lewis","W");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (6,"Cooper","Sybill","Y");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (7,"Cherry","Leo","Y");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (9,"Nieves","Jacob","K");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (4,"Conley","Silas","S");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (10,"Manning","Carly","N");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (5,"Rios","Herrod","A");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (5,"Pitts","Madeline","I");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (7,"Riggs","Tanner","A");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (10,"Guerrero","Orlando","Y");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (10,"Dillard","Aristotle","U");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (1,"Adkins","Kylie","Q");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (5,"Delaney","Keane","M");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (9,"Whitehead","Madison","R");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (9,"Rodgers","Indigo","H");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (3,"Patel","Harper","I");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (1,"Bonner","Emerald","R");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (7,"Alvarado","Blaine","A");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (1,"Francis","Rowan","Y");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (3,"Hansen","Joshua","Z");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (3,"Richardson","Paloma","U");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (1,"Peters","Nina","C");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (6,"Logan","Aiko","A");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (7,"Gilbert","Karly","A");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (7,"Kelly","Eliana","I");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (5,"Walton","Dale","Q");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (6,"Klein","Vincent","P");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (4,"Neal","Belle","B");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (4,"Craig","Prescott","P");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (4,"Walls","Caleb","N");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (3,"Downs","Victor","R");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (5,"Villarreal","Chancellor","H");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (8,"Stuart","Maris","U");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (3,"Hewitt","Wallace","D");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (9,"Merrill","Stacy","Y");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (8,"Benson","Fitzgerald","W");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (6,"Fitzpatrick","Vance","C");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (3,"Bradley","Cynthia","J");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (6,"Logan","Buffy","V");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (2,"Barlow","Heidi","M");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (5,"Gordon","Natalie","Y");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (3,"Day","Sheila","L");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (5,"Coleman","Serena","R");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (9,"Solis","Byron","H");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (3,"Mcdowell","Malachi","W");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (1,"Boyer","Leo","J");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (4,"Armstrong","Grace","G");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (1,"Vaughn","Joelle","G");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (2,"Woods","Roth","H");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (7,"Guy","Teagan","O");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (2,"Robertson","Winter","M");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (4,"Gaines","Calvin","M");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (9,"Thompson","Wade","Z");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (3,"Finch","Gary","B");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (1,"Duffy","Ebony","Z");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (2,"Workman","Mariam","Z");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (10,"Roach","Hall","V");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (5,"Bush","Rigel","T");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (2,"Curry","Gay","B");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (1,"Mcintosh","Evan","O");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (4,"Chavez","Angela","H");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (5,"Holman","Noble","C");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (8,"Turner","Carl","S");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (6,"Cruz","Gannon","F");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (7,"Stein","Jael","H");
+INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (10,"Snyder","Austin","E");
 
-INSERT INTO `brigadiers` (`worker_id`) VALUES (85),(71),(70),(28),(5),(14),(37),(96),(2),(19),(80),(52),(90),(25),(85);
+CALL create_brigadiers();
+DROP PROCEDURE create_brigadiers;
 
-UPDATE `workers` SET `brigadier_id` = 6 WHERE `id` = 1;
-UPDATE `workers` SET `brigadier_id` = 5 WHERE `id` = 2;
-UPDATE `workers` SET `brigadier_id` = 5 WHERE `id` = 3;
-UPDATE `workers` SET `brigadier_id` = 9 WHERE `id` = 4;
-UPDATE `workers` SET `brigadier_id` = 13 WHERE `id` = 5;
-UPDATE `workers` SET `brigadier_id` = 4 WHERE `id` = 6;
-UPDATE `workers` SET `brigadier_id` = 9 WHERE `id` = 7;
-UPDATE `workers` SET `brigadier_id` = 5 WHERE `id` = 8;
-UPDATE `workers` SET `brigadier_id` = 15 WHERE `id` = 9;
-UPDATE `workers` SET `brigadier_id` = 9 WHERE `id` = 10;
-UPDATE `workers` SET `brigadier_id` = 5 WHERE `id` = 11;
-UPDATE `workers` SET `brigadier_id` = 3 WHERE `id` = 12;
-UPDATE `workers` SET `brigadier_id` = 9 WHERE `id` = 13;
-UPDATE `workers` SET `brigadier_id` = 12 WHERE `id` = 14;
-UPDATE `workers` SET `brigadier_id` = 2 WHERE `id` = 15;
-UPDATE `workers` SET `brigadier_id` = 5 WHERE `id` = 16;
-UPDATE `workers` SET `brigadier_id` = 3 WHERE `id` = 17;
-UPDATE `workers` SET `brigadier_id` = 5 WHERE `id` = 18;
-UPDATE `workers` SET `brigadier_id` = 13 WHERE `id` = 19;
-UPDATE `workers` SET `brigadier_id` = 9 WHERE `id` = 20;
-UPDATE `workers` SET `brigadier_id` = 2 WHERE `id` = 21;
-UPDATE `workers` SET `brigadier_id` = 8 WHERE `id` = 22;
-UPDATE `workers` SET `brigadier_id` = 12 WHERE `id` = 23;
-UPDATE `workers` SET `brigadier_id` = 12 WHERE `id` = 24;
-UPDATE `workers` SET `brigadier_id` = 9 WHERE `id` = 25;
-UPDATE `workers` SET `brigadier_id` = 9 WHERE `id` = 26;
-UPDATE `workers` SET `brigadier_id` = 7 WHERE `id` = 27;
-UPDATE `workers` SET `brigadier_id` = 5 WHERE `id` = 28;
-UPDATE `workers` SET `brigadier_id` = 1 WHERE `id` = 29;
-UPDATE `workers` SET `brigadier_id` = 6 WHERE `id` = 30;
-UPDATE `workers` SET `brigadier_id` = 12 WHERE `id` = 31;
-UPDATE `workers` SET `brigadier_id` = 4 WHERE `id` = 32;
-UPDATE `workers` SET `brigadier_id` = 13 WHERE `id` = 33;
-UPDATE `workers` SET `brigadier_id` = 5 WHERE `id` = 34;
-UPDATE `workers` SET `brigadier_id` = 15 WHERE `id` = 35;
-UPDATE `workers` SET `brigadier_id` = 8 WHERE `id` = 36;
-UPDATE `workers` SET `brigadier_id` = 13 WHERE `id` = 37;
-UPDATE `workers` SET `brigadier_id` = 12 WHERE `id` = 38;
-UPDATE `workers` SET `brigadier_id` = 3 WHERE `id` = 39;
-UPDATE `workers` SET `brigadier_id` = 14 WHERE `id` = 40;
-UPDATE `workers` SET `brigadier_id` = 15 WHERE `id` = 41;
-UPDATE `workers` SET `brigadier_id` = 10 WHERE `id` = 42;
-UPDATE `workers` SET `brigadier_id` = 5 WHERE `id` = 43;
-UPDATE `workers` SET `brigadier_id` = 5 WHERE `id` = 44;
-UPDATE `workers` SET `brigadier_id` = 1 WHERE `id` = 45;
-UPDATE `workers` SET `brigadier_id` = 12 WHERE `id` = 46;
-UPDATE `workers` SET `brigadier_id` = 6 WHERE `id` = 47;
-UPDATE `workers` SET `brigadier_id` = 14 WHERE `id` = 48;
-UPDATE `workers` SET `brigadier_id` = 11 WHERE `id` = 49;
-UPDATE `workers` SET `brigadier_id` = 15 WHERE `id` = 50;
-UPDATE `workers` SET `brigadier_id` = 12 WHERE `id` = 51;
-UPDATE `workers` SET `brigadier_id` = 14 WHERE `id` = 52;
-UPDATE `workers` SET `brigadier_id` = 2 WHERE `id` = 53;
-UPDATE `workers` SET `brigadier_id` = 10 WHERE `id` = 54;
-UPDATE `workers` SET `brigadier_id` = 9 WHERE `id` = 55;
-UPDATE `workers` SET `brigadier_id` = 7 WHERE `id` = 56;
-UPDATE `workers` SET `brigadier_id` = 11 WHERE `id` = 57;
-UPDATE `workers` SET `brigadier_id` = 11 WHERE `id` = 58;
-UPDATE `workers` SET `brigadier_id` = 13 WHERE `id` = 59;
-UPDATE `workers` SET `brigadier_id` = 5 WHERE `id` = 60;
-UPDATE `workers` SET `brigadier_id` = 10 WHERE `id` = 61;
-UPDATE `workers` SET `brigadier_id` = 7 WHERE `id` = 62;
-UPDATE `workers` SET `brigadier_id` = 11 WHERE `id` = 63;
-UPDATE `workers` SET `brigadier_id` = 5 WHERE `id` = 64;
-UPDATE `workers` SET `brigadier_id` = 13 WHERE `id` = 65;
-UPDATE `workers` SET `brigadier_id` = 1 WHERE `id` = 66;
-UPDATE `workers` SET `brigadier_id` = 15 WHERE `id` = 67;
-UPDATE `workers` SET `brigadier_id` = 3 WHERE `id` = 68;
-UPDATE `workers` SET `brigadier_id` = 5 WHERE `id` = 69;
-UPDATE `workers` SET `brigadier_id` = 3 WHERE `id` = 70;
-UPDATE `workers` SET `brigadier_id` = 4 WHERE `id` = 71;
-UPDATE `workers` SET `brigadier_id` = 15 WHERE `id` = 72;
-UPDATE `workers` SET `brigadier_id` = 11 WHERE `id` = 73;
-UPDATE `workers` SET `brigadier_id` = 3 WHERE `id` = 74;
-UPDATE `workers` SET `brigadier_id` = 3 WHERE `id` = 75;
-UPDATE `workers` SET `brigadier_id` = 13 WHERE `id` = 76;
-UPDATE `workers` SET `brigadier_id` = 3 WHERE `id` = 77;
-UPDATE `workers` SET `brigadier_id` = 5 WHERE `id` = 78;
-UPDATE `workers` SET `brigadier_id` = 6 WHERE `id` = 79;
-UPDATE `workers` SET `brigadier_id` = 11 WHERE `id` = 80;
-UPDATE `workers` SET `brigadier_id` = 14 WHERE `id` = 81;
-UPDATE `workers` SET `brigadier_id` = 8 WHERE `id` = 82;
-UPDATE `workers` SET `brigadier_id` = 7 WHERE `id` = 83;
-UPDATE `workers` SET `brigadier_id` = 13 WHERE `id` = 84;
-UPDATE `workers` SET `brigadier_id` = 12 WHERE `id` = 85;
-UPDATE `workers` SET `brigadier_id` = 6 WHERE `id` = 86;
-UPDATE `workers` SET `brigadier_id` = 13 WHERE `id` = 87;
-UPDATE `workers` SET `brigadier_id` = 10 WHERE `id` = 88;
-UPDATE `workers` SET `brigadier_id` = 14 WHERE `id` = 89;
-UPDATE `workers` SET `brigadier_id` = 1 WHERE `id` = 90;
-UPDATE `workers` SET `brigadier_id` = 2 WHERE `id` = 91;
-UPDATE `workers` SET `brigadier_id` = 15 WHERE `id` = 92;
-UPDATE `workers` SET `brigadier_id` = 6 WHERE `id` = 93;
-UPDATE `workers` SET `brigadier_id` = 1 WHERE `id` = 94;
-UPDATE `workers` SET `brigadier_id` = 15 WHERE `id` = 95;
-UPDATE `workers` SET `brigadier_id` = 12 WHERE `id` = 96;
-UPDATE `workers` SET `brigadier_id` = 2 WHERE `id` = 97;
-UPDATE `workers` SET `brigadier_id` = 7 WHERE `id` = 98;
-UPDATE `workers` SET `brigadier_id` = 14 WHERE `id` = 99;
-UPDATE `workers` SET `brigadier_id` = 1 WHERE `id` = 100;
+CALL set_brigadiers();
+DROP PROCEDURE set_brigadiers;
 
 INSERT INTO `item_types` (`name`,`duration`) VALUES 
-  ("ornare, lectus",8),
-  ("Duis cursus,",6),
-  ("vel, mauris.",10),
-  ("cursus a,",6),
-  ("odio. Phasellus",6),
-  ("vehicula risus.",7),
-  ("a tortor.",7),
-  ("ante dictum",11),
-  ("urna. Nunc",6),
-  ("vitae erat",7),
-  ("elementum, dui",11),
-  ("ultrices iaculis",8),
-  ("lobortis ultrices.",8),
-  ("nec, diam.",6),
-  ("augue porttitor",10),
-  ("erat vitae",6),
-  ("auctor, velit",7),
-  ("enim, sit",6),
-  ("purus. Duis",12),
-  ("sed turpis",9)
+  ("Перфоратор (аккум)",6),
+  ("Перфоратор (пров)",6),
+  ("Шуруповёрт",6),
+  ("Болгарка (аккум)",6),
+  ("Болгарка (пров)",6),
+  ("Лестница динамика",12),
+  ("Лестница 3*6",12),
+  ("Лестница 3*9",12),
+  ("Лестница 3*12",12),
+  ("Лестница 3*15",12),
+  ("Лестница ступенька",12),
+  ("Набор отвёрток диэл",6),
+  ("Привязь",12),
+  ("Строп",12),
+  ("Аммортизатор 2м",12),
+  ("Аммортизатор 3м",12),
+  ("Бокорезы 15см диэл",6),
+  ("Бокорезы 20см диэл",6),
+  ("Плоскогубцы 15см диэл",6),
+  ("Плоскогубцы 20см диэл",6)
 ;
 
 INSERT INTO `certificate_types` (`name`,`change_duration`,`attestation_duration`) VALUES 
-  ("accumsan interdum",42,12),
-  ("vitae, aliquet",57,12),
-  ("tincidunt. Donec",50,12),
-  ("Curabitur vel",41,12),
-  ("ipsum. Suspendisse",17,12),
-  ("posuere cubilia",41,12),
-  ("orci. Phasellus",48,12),
-  ("risus varius",20,12),
-  ("luctus felis",42,12),
-  ("sed libero.",12,12)
+  ("ВТМ",12,12),
+  ("Высота 1гр",36,12),
+  ("Высота 2гр",36,12),
+  ("Высота 3гр",60,12),
+  ("Люлька",60,12),
+  ("Охрана труда",12,12),
+  ("Охрана труда (внеш)",36,36),
+  ("Первая помощь",12,12),
+  ("ПТМ",12,12),
+  ("Стропальщик",60,12)
 ;
 
 INSERT INTO `items` (`worker_id`,`item_type_id`,`last_check`) VALUES (68,9,"2020-11-26"),(81,14,"2021-02-15"),(35,9,"2020-07-05"),(11,16,"2021-01-16"),(47,6,"2020-09-24"),(66,12,"2020-10-16"),(53,16,"2020-06-18"),(77,18,"2020-08-29"),(15,7,"2020-08-07"),(67,11,"2021-03-18");
@@ -284,33 +187,79 @@ INSERT INTO `items` (`worker_id`,`item_type_id`,`last_check`) VALUES (16,17,"202
 INSERT INTO `items` (`worker_id`,`item_type_id`,`last_check`) VALUES (93,1,"2020-12-27"),(52,12,"2021-05-16"),(41,4,"2021-02-05"),(97,1,"2020-08-08"),(60,14,"2021-03-18"),(93,17,"2021-02-10"),(73,16,"2021-01-26"),(68,1,"2020-09-25"),(23,16,"2020-11-24"),(83,6,"2021-01-10");
 INSERT INTO `items` (`worker_id`,`item_type_id`,`last_check`) VALUES (92,13,"2021-04-25"),(98,1,"2020-08-04"),(25,6,"2021-03-25"),(28,5,"2020-11-19"),(75,9,"2020-06-28"),(39,9,"2020-11-13"),(47,5,"2020-06-27"),(33,13,"2020-10-21"),(81,1,"2021-01-22"),(97,9,"2020-09-08");
 
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (69,4,"2020-06-07","2021-04-04"),(98,8,"2020-06-07","2020-07-10"),(48,8,"2020-06-07","2020-09-13"),(19,6,"2020-06-07","2021-03-05"),(3,5,"2020-06-07","2020-11-27"),(33,4,"2020-06-07","2021-03-04"),(100,1,"2020-06-07","2021-02-27"),(99,5,"2020-06-07","2020-10-07"),(35,1,"2020-06-07","2020-09-02"),(26,10,"2020-06-07","2020-09-29");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (44,2,"2020-06-07","2020-10-23"),(49,1,"2020-06-07","2020-11-15"),(82,1,"2020-06-07","2021-01-30"),(53,7,"2020-06-07","2020-10-10"),(94,8,"2020-06-07","2021-05-21"),(17,7,"2020-06-07","2020-12-01"),(11,4,"2020-06-07","2020-11-06"),(24,2,"2020-06-07","2021-02-27"),(36,6,"2020-06-07","2021-04-11"),(49,6,"2020-06-07","2020-09-16");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (84,6,"2020-06-07","2021-03-02"),(2,8,"2020-06-07","2021-02-28"),(27,1,"2020-06-07","2020-10-09"),(92,3,"2020-06-07","2021-01-26"),(26,7,"2020-06-07","2020-07-04"),(30,7,"2020-06-07","2020-12-17"),(15,2,"2020-06-07","2021-02-23"),(68,7,"2020-06-07","2021-05-11"),(26,7,"2020-06-07","2021-05-23"),(4,6,"2020-06-07","2021-06-01");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (57,8,"2020-06-07","2020-10-27"),(6,3,"2020-06-07","2020-06-19"),(12,1,"2020-06-07","2020-10-26"),(45,4,"2020-06-07","2021-04-03"),(52,10,"2020-06-07","2020-10-04"),(44,9,"2020-06-07","2021-03-18"),(5,6,"2020-06-07","2020-08-30"),(60,9,"2020-06-07","2021-02-05"),(15,10,"2020-06-07","2021-05-27"),(32,3,"2020-06-07","2020-07-16");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (13,9,"2020-06-07","2020-10-08"),(29,2,"2020-06-07","2020-08-12"),(6,4,"2020-06-07","2020-09-10"),(22,7,"2020-06-07","2020-10-28"),(90,9,"2020-06-07","2020-11-15"),(4,1,"2020-06-07","2020-10-31"),(36,10,"2020-06-07","2020-10-11"),(15,6,"2020-06-07","2020-11-09"),(78,2,"2020-06-07","2020-08-04"),(34,5,"2020-06-07","2021-02-02");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (48,1,"2020-06-07","2020-11-17"),(43,1,"2020-06-07","2020-09-23"),(2,5,"2020-06-07","2020-12-31"),(77,6,"2020-06-07","2021-02-14"),(10,6,"2020-06-07","2021-01-02"),(48,6,"2020-06-07","2021-03-06"),(70,8,"2020-06-07","2020-11-04"),(45,7,"2020-06-07","2020-09-28"),(35,7,"2020-06-07","2021-02-23"),(60,5,"2020-06-07","2021-05-03");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (32,4,"2020-06-07","2020-06-10"),(38,5,"2020-06-07","2020-08-07"),(28,4,"2020-06-07","2021-05-24"),(92,8,"2020-06-07","2021-03-14"),(83,1,"2020-06-07","2020-09-20"),(31,8,"2020-06-07","2020-09-02"),(76,10,"2020-06-07","2021-04-20"),(98,5,"2020-06-07","2021-05-24"),(82,8,"2020-06-07","2021-03-29"),(17,4,"2020-06-07","2020-11-05");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (90,1,"2020-06-07","2020-07-11"),(27,8,"2020-06-07","2021-04-15"),(30,5,"2020-06-07","2021-04-05"),(90,8,"2020-06-07","2020-12-21"),(52,10,"2020-06-07","2020-10-17"),(57,9,"2020-06-07","2021-03-11"),(67,6,"2020-06-07","2020-08-14"),(6,4,"2020-06-07","2021-01-05"),(27,6,"2020-06-07","2020-07-27"),(53,8,"2020-06-07","2021-06-03");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (72,6,"2020-06-07","2020-07-15"),(15,5,"2020-06-07","2020-11-01"),(92,7,"2020-06-07","2020-12-26"),(84,5,"2020-06-07","2021-04-05"),(96,8,"2020-06-07","2020-06-14"),(41,8,"2020-06-07","2021-02-16"),(66,8,"2020-06-07","2021-04-12"),(57,10,"2020-06-07","2020-07-11"),(14,6,"2020-06-07","2020-06-26"),(16,10,"2020-06-07","2021-04-30");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (97,1,"2020-06-07","2020-10-28"),(35,6,"2020-06-07","2021-06-02"),(42,2,"2020-06-07","2021-01-09"),(40,5,"2020-06-07","2020-11-20"),(39,6,"2020-06-07","2021-01-09"),(88,8,"2020-06-07","2020-08-19"),(95,10,"2020-06-07","2020-06-14"),(12,4,"2020-06-07","2020-10-18"),(45,7,"2020-06-07","2021-02-12"),(27,2,"2020-06-07","2020-11-11");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (67,8,"2020-06-07","2020-10-19"),(66,8,"2020-06-07","2020-12-18"),(95,4,"2020-06-07","2021-06-01"),(29,1,"2020-06-07","2021-02-21"),(79,10,"2020-06-07","2021-04-11"),(86,10,"2020-06-07","2021-03-04"),(33,2,"2020-06-07","2020-07-04"),(96,4,"2020-06-07","2021-04-27"),(14,7,"2020-06-07","2021-05-10"),(2,5,"2020-06-07","2020-10-09");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (27,6,"2020-06-07","2020-07-17"),(16,1,"2020-06-07","2020-10-20"),(20,4,"2020-06-07","2020-09-12"),(16,6,"2020-06-07","2021-04-24"),(99,4,"2020-06-07","2021-04-20"),(87,8,"2020-06-07","2021-05-18"),(64,10,"2020-06-07","2020-11-29"),(62,6,"2020-06-07","2020-09-21"),(31,2,"2020-06-07","2021-06-02"),(41,9,"2020-06-07","2020-07-19");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (29,4,"2020-06-07","2020-11-14"),(19,9,"2020-06-07","2021-05-09"),(24,3,"2020-06-07","2020-09-10"),(51,6,"2020-06-07","2021-05-21"),(73,10,"2020-06-07","2020-11-30"),(87,2,"2020-06-07","2020-10-27"),(41,5,"2020-06-07","2020-08-21"),(36,4,"2020-06-07","2021-01-18"),(52,5,"2020-06-07","2021-02-03"),(51,10,"2020-06-07","2021-04-25");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (37,3,"2020-06-07","2021-01-01"),(89,6,"2020-06-07","2020-09-28"),(54,2,"2020-06-07","2020-09-23"),(34,4,"2020-06-07","2020-08-29"),(22,4,"2020-06-07","2021-02-25"),(42,5,"2020-06-07","2020-09-12"),(33,5,"2020-06-07","2020-12-02"),(39,1,"2020-06-07","2020-10-29"),(48,8,"2020-06-07","2020-08-23"),(27,1,"2020-06-07","2020-12-18");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (25,8,"2020-06-07","2020-12-10"),(91,10,"2020-06-07","2020-09-23"),(89,10,"2020-06-07","2021-04-14"),(43,5,"2020-06-07","2021-02-16"),(83,3,"2020-06-07","2021-02-23"),(61,3,"2020-06-07","2020-11-14"),(29,7,"2020-06-07","2020-09-24"),(11,4,"2020-06-07","2020-12-14"),(71,2,"2020-06-07","2020-12-05"),(84,10,"2020-06-07","2020-08-22");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (59,9,"2020-06-07","2021-06-07"),(86,3,"2020-06-07","2020-06-18"),(49,3,"2020-06-07","2020-10-29"),(8,4,"2020-06-07","2021-04-11"),(91,3,"2020-06-07","2021-03-17"),(2,9,"2020-06-07","2020-07-08"),(29,1,"2020-06-07","2020-11-14"),(81,2,"2020-06-07","2021-01-22"),(91,3,"2020-06-07","2020-10-15"),(27,7,"2020-06-07","2021-02-25");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (22,5,"2020-06-07","2021-02-01"),(78,8,"2020-06-07","2020-10-12"),(97,8,"2020-06-07","2020-11-10"),(53,3,"2020-06-07","2021-01-14"),(63,9,"2020-06-07","2021-03-20"),(83,1,"2020-06-07","2020-06-14"),(21,5,"2020-06-07","2021-05-03"),(45,2,"2020-06-07","2020-11-18"),(32,3,"2020-06-07","2021-05-19"),(66,6,"2020-06-07","2020-07-08");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (49,3,"2020-06-07","2021-06-06"),(43,9,"2020-06-07","2021-01-16"),(80,7,"2020-06-07","2020-12-30"),(74,7,"2020-06-07","2021-05-25"),(51,8,"2020-06-07","2020-10-13"),(43,9,"2020-06-07","2020-07-28"),(18,8,"2020-06-07","2021-04-06"),(36,5,"2020-06-07","2021-06-04"),(38,5,"2020-06-07","2021-02-09"),(39,3,"2020-06-07","2021-01-06");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (28,8,"2020-06-07","2020-06-24"),(99,3,"2020-06-07","2020-08-16"),(61,5,"2020-06-07","2020-08-14"),(5,2,"2020-06-07","2020-11-02"),(6,9,"2020-06-07","2020-11-22"),(62,2,"2020-06-07","2020-08-15"),(8,9,"2020-06-07","2021-02-28"),(86,6,"2020-06-07","2020-08-01"),(51,3,"2020-06-07","2020-09-14"),(79,7,"2020-06-07","2021-04-27");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (43,4,"2020-06-07","2021-05-30"),(94,10,"2020-06-07","2021-05-27"),(68,6,"2020-06-07","2021-05-01"),(53,7,"2020-06-07","2020-08-17"),(41,9,"2020-06-07","2020-08-11"),(79,1,"2020-06-07","2020-10-11"),(29,10,"2020-06-07","2021-03-28"),(13,2,"2020-06-07","2021-01-29"),(67,7,"2020-06-07","2020-12-31"),(40,2,"2020-06-07","2021-05-29");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (20,4,"2020-06-07","2020-12-22"),(36,4,"2020-06-07","2021-03-03"),(12,1,"2020-06-07","2021-01-23"),(84,8,"2020-06-07","2021-04-04"),(16,4,"2020-06-07","2020-08-12"),(5,2,"2020-06-07","2020-12-15"),(70,1,"2020-06-07","2021-01-03"),(83,9,"2020-06-07","2020-11-30"),(54,1,"2020-06-07","2020-12-17"),(70,5,"2020-06-07","2020-09-25");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (52,1,"2020-06-07","2021-03-18"),(96,2,"2020-06-07","2021-02-12"),(70,9,"2020-06-07","2021-04-10"),(22,4,"2020-06-07","2020-12-05"),(76,8,"2020-06-07","2020-07-28"),(13,1,"2020-06-07","2021-02-13"),(62,5,"2020-06-07","2020-10-31"),(11,5,"2020-06-07","2020-12-31"),(28,3,"2020-06-07","2021-03-15"),(93,10,"2020-06-07","2020-12-28");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (35,2,"2020-06-07","2021-05-28"),(18,7,"2020-06-07","2020-09-12"),(22,9,"2020-06-07","2021-01-13"),(81,4,"2020-06-07","2020-11-20"),(78,1,"2020-06-07","2021-03-11"),(27,6,"2020-06-07","2021-05-27"),(22,1,"2020-06-07","2020-07-17"),(1,6,"2020-06-07","2020-08-08"),(71,9,"2020-06-07","2021-01-20"),(3,9,"2020-06-07","2020-08-24");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (65,10,"2020-06-07","2020-09-29"),(31,8,"2020-06-07","2021-05-15"),(75,5,"2020-06-07","2020-09-12"),(73,7,"2020-06-07","2020-06-15"),(69,1,"2020-06-07","2021-03-10"),(73,7,"2020-06-07","2020-07-11"),(99,3,"2020-06-07","2020-07-30"),(26,7,"2020-06-07","2020-12-20"),(1,2,"2020-06-07","2020-08-14"),(43,1,"2020-06-07","2020-10-24");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (56,3,"2020-06-07","2021-05-27"),(7,6,"2020-06-07","2021-06-04"),(33,8,"2020-06-07","2020-12-03"),(12,1,"2020-06-07","2020-11-29"),(36,3,"2020-06-07","2020-06-29"),(34,7,"2020-06-07","2021-05-13"),(7,7,"2020-06-07","2020-10-22"),(81,8,"2020-06-07","2021-01-19"),(2,5,"2020-06-07","2020-07-19"),(9,3,"2020-06-07","2021-03-11");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (70,3,"2020-06-07","2020-06-20"),(23,3,"2020-06-07","2020-08-31"),(72,5,"2020-06-07","2020-12-28"),(76,6,"2020-06-07","2020-09-30"),(1,5,"2020-06-07","2021-01-16"),(47,9,"2020-06-07","2021-05-08"),(80,1,"2020-06-07","2020-12-31"),(61,7,"2020-06-07","2020-08-17"),(51,4,"2020-06-07","2021-06-02"),(12,5,"2020-06-07","2020-11-27");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (50,8,"2020-06-07","2021-01-28"),(25,4,"2020-06-07","2020-10-07"),(14,2,"2020-06-07","2021-05-19"),(5,9,"2020-06-07","2021-03-15"),(78,6,"2020-06-07","2020-11-11"),(40,7,"2020-06-07","2020-11-17"),(30,5,"2020-06-07","2020-07-03"),(56,10,"2020-06-07","2020-08-01"),(34,1,"2020-06-07","2020-12-10"),(58,8,"2020-06-07","2020-10-03");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (11,8,"2020-06-07","2021-01-20"),(53,10,"2020-06-07","2020-09-08"),(14,8,"2020-06-07","2021-04-25"),(56,9,"2020-06-07","2020-08-17"),(67,8,"2020-06-07","2020-08-06"),(99,8,"2020-06-07","2020-06-10"),(15,8,"2020-06-07","2020-06-30"),(14,2,"2020-06-07","2021-03-09"),(68,2,"2020-06-07","2020-10-24"),(4,1,"2020-06-07","2021-05-09");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (70,3,"2020-06-07","2020-06-12"),(68,4,"2020-06-07","2020-09-15"),(98,7,"2020-06-07","2021-04-24"),(87,9,"2020-06-07","2020-08-26"),(73,5,"2020-06-07","2020-09-11"),(57,5,"2020-06-07","2020-10-23"),(42,5,"2020-06-07","2020-09-27"),(26,7,"2020-06-07","2020-07-01"),(97,4,"2020-06-07","2021-04-16"),(63,10,"2020-06-07","2021-03-10");
-INSERT INTO `certificates` (`worker_id`,`item_type_id`,`give_date`,`last_attestation`) VALUES (52,5,"2020-06-07","2021-02-27"),(30,5,"2020-06-07","2020-11-28"),(87,10,"2020-06-07","2020-06-13"),(4,5,"2020-06-07","2021-03-05"),(40,3,"2020-06-07","2020-10-20"),(88,3,"2020-06-07","2020-10-08"),(30,3,"2020-06-07","2020-11-10"),(7,10,"2020-06-07","2021-06-03"),(62,6,"2020-06-07","2020-08-27"),(97,10,"2020-06-07","2020-11-08");
+CALL update_itemdates();
+DROP PROCEDURE update_itemdates;
+
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (69,4,"2020-06-07","2021-04-04"),(98,8,"2020-06-07","2020-07-10"),(48,8,"2020-06-07","2020-09-13"),(19,6,"2020-06-07","2021-03-05"),(3,5,"2020-06-07","2020-11-27"),(33,4,"2020-06-07","2021-03-04"),(100,1,"2020-06-07","2021-02-27"),(99,5,"2020-06-07","2020-10-07"),(35,1,"2020-06-07","2020-09-02"),(26,10,"2020-06-07","2020-09-29");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (44,2,"2020-06-07","2020-10-23"),(49,1,"2020-06-07","2020-11-15"),(82,1,"2020-06-07","2021-01-30"),(53,7,"2020-06-07","2020-10-10"),(94,8,"2020-06-07","2021-05-21"),(17,7,"2020-06-07","2020-12-01"),(11,4,"2020-06-07","2020-11-06"),(24,2,"2020-06-07","2021-02-27"),(36,6,"2020-06-07","2021-04-11"),(49,6,"2020-06-07","2020-09-16");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (84,6,"2020-06-07","2021-03-02"),(2,8,"2020-06-07","2021-02-28"),(27,1,"2020-06-07","2020-10-09"),(92,3,"2020-06-07","2021-01-26"),(26,7,"2020-06-07","2020-07-04"),(30,7,"2020-06-07","2020-12-17"),(15,2,"2020-06-07","2021-02-23"),(68,7,"2020-06-07","2021-05-11"),(26,7,"2020-06-07","2021-05-23"),(4,6,"2020-06-07","2021-06-01");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (57,8,"2020-06-07","2020-10-27"),(6,3,"2020-06-07","2020-06-19"),(12,1,"2020-06-07","2020-10-26"),(45,4,"2020-06-07","2021-04-03"),(52,10,"2020-06-07","2020-10-04"),(44,9,"2020-06-07","2021-03-18"),(5,6,"2020-06-07","2020-08-30"),(60,9,"2020-06-07","2021-02-05"),(15,10,"2020-06-07","2021-05-27"),(32,3,"2020-06-07","2020-07-16");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (13,9,"2020-06-07","2020-10-08"),(29,2,"2020-06-07","2020-08-12"),(6,4,"2020-06-07","2020-09-10"),(22,7,"2020-06-07","2020-10-28"),(90,9,"2020-06-07","2020-11-15"),(4,1,"2020-06-07","2020-10-31"),(36,10,"2020-06-07","2020-10-11"),(15,6,"2020-06-07","2020-11-09"),(78,2,"2020-06-07","2020-08-04"),(34,5,"2020-06-07","2021-02-02");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (48,1,"2020-06-07","2020-11-17"),(43,1,"2020-06-07","2020-09-23"),(2,5,"2020-06-07","2020-12-31"),(77,6,"2020-06-07","2021-02-14"),(10,6,"2020-06-07","2021-01-02"),(48,6,"2020-06-07","2021-03-06"),(70,8,"2020-06-07","2020-11-04"),(45,7,"2020-06-07","2020-09-28"),(35,7,"2020-06-07","2021-02-23"),(60,5,"2020-06-07","2021-05-03");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (32,4,"2020-06-07","2020-06-10"),(38,5,"2020-06-07","2020-08-07"),(28,4,"2020-06-07","2021-05-24"),(92,8,"2020-06-07","2021-03-14"),(83,1,"2020-06-07","2020-09-20"),(31,8,"2020-06-07","2020-09-02"),(76,10,"2020-06-07","2021-04-20"),(98,5,"2020-06-07","2021-05-24"),(82,8,"2020-06-07","2021-03-29"),(17,4,"2020-06-07","2020-11-05");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (90,1,"2020-06-07","2020-07-11"),(27,8,"2020-06-07","2021-04-15"),(30,5,"2020-06-07","2021-04-05"),(90,8,"2020-06-07","2020-12-21"),(52,10,"2020-06-07","2020-10-17"),(57,9,"2020-06-07","2021-03-11"),(67,6,"2020-06-07","2020-08-14"),(6,4,"2020-06-07","2021-01-05"),(27,6,"2020-06-07","2020-07-27"),(53,8,"2020-06-07","2021-06-03");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (72,6,"2020-06-07","2020-07-15"),(15,5,"2020-06-07","2020-11-01"),(92,7,"2020-06-07","2020-12-26"),(84,5,"2020-06-07","2021-04-05"),(96,8,"2020-06-07","2020-06-14"),(41,8,"2020-06-07","2021-02-16"),(66,8,"2020-06-07","2021-04-12"),(57,10,"2020-06-07","2020-07-11"),(14,6,"2020-06-07","2020-06-26"),(16,10,"2020-06-07","2021-04-30");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (97,1,"2020-06-07","2020-10-28"),(35,6,"2020-06-07","2021-06-02"),(42,2,"2020-06-07","2021-01-09"),(40,5,"2020-06-07","2020-11-20"),(39,6,"2020-06-07","2021-01-09"),(88,8,"2020-06-07","2020-08-19"),(95,10,"2020-06-07","2020-06-14"),(12,4,"2020-06-07","2020-10-18"),(45,7,"2020-06-07","2021-02-12"),(27,2,"2020-06-07","2020-11-11");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (67,8,"2020-06-07","2020-10-19"),(66,8,"2020-06-07","2020-12-18"),(95,4,"2020-06-07","2021-06-01"),(29,1,"2020-06-07","2021-02-21"),(79,10,"2020-06-07","2021-04-11"),(86,10,"2020-06-07","2021-03-04"),(33,2,"2020-06-07","2020-07-04"),(96,4,"2020-06-07","2021-04-27"),(14,7,"2020-06-07","2021-05-10"),(2,5,"2020-06-07","2020-10-09");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (27,6,"2020-06-07","2020-07-17"),(16,1,"2020-06-07","2020-10-20"),(20,4,"2020-06-07","2020-09-12"),(16,6,"2020-06-07","2021-04-24"),(99,4,"2020-06-07","2021-04-20"),(87,8,"2020-06-07","2021-05-18"),(64,10,"2020-06-07","2020-11-29"),(62,6,"2020-06-07","2020-09-21"),(31,2,"2020-06-07","2021-06-02"),(41,9,"2020-06-07","2020-07-19");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (29,4,"2020-06-07","2020-11-14"),(19,9,"2020-06-07","2021-05-09"),(24,3,"2020-06-07","2020-09-10"),(51,6,"2020-06-07","2021-05-21"),(73,10,"2020-06-07","2020-11-30"),(87,2,"2020-06-07","2020-10-27"),(41,5,"2020-06-07","2020-08-21"),(36,4,"2020-06-07","2021-01-18"),(52,5,"2020-06-07","2021-02-03"),(51,10,"2020-06-07","2021-04-25");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (37,3,"2020-06-07","2021-01-01"),(89,6,"2020-06-07","2020-09-28"),(54,2,"2020-06-07","2020-09-23"),(34,4,"2020-06-07","2020-08-29"),(22,4,"2020-06-07","2021-02-25"),(42,5,"2020-06-07","2020-09-12"),(33,5,"2020-06-07","2020-12-02"),(39,1,"2020-06-07","2020-10-29"),(48,8,"2020-06-07","2020-08-23"),(27,1,"2020-06-07","2020-12-18");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (25,8,"2020-06-07","2020-12-10"),(91,10,"2020-06-07","2020-09-23"),(89,10,"2020-06-07","2021-04-14"),(43,5,"2020-06-07","2021-02-16"),(83,3,"2020-06-07","2021-02-23"),(61,3,"2020-06-07","2020-11-14"),(29,7,"2020-06-07","2020-09-24"),(11,4,"2020-06-07","2020-12-14"),(71,2,"2020-06-07","2020-12-05"),(84,10,"2020-06-07","2020-08-22");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (59,9,"2020-06-07","2021-06-07"),(86,3,"2020-06-07","2020-06-18"),(49,3,"2020-06-07","2020-10-29"),(8,4,"2020-06-07","2021-04-11"),(91,3,"2020-06-07","2021-03-17"),(2,9,"2020-06-07","2020-07-08"),(29,1,"2020-06-07","2020-11-14"),(81,2,"2020-06-07","2021-01-22"),(91,3,"2020-06-07","2020-10-15"),(27,7,"2020-06-07","2021-02-25");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (22,5,"2020-06-07","2021-02-01"),(78,8,"2020-06-07","2020-10-12"),(97,8,"2020-06-07","2020-11-10"),(53,3,"2020-06-07","2021-01-14"),(63,9,"2020-06-07","2021-03-20"),(83,1,"2020-06-07","2020-06-14"),(21,5,"2020-06-07","2021-05-03"),(45,2,"2020-06-07","2020-11-18"),(32,3,"2020-06-07","2021-05-19"),(66,6,"2020-06-07","2020-07-08");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (49,3,"2020-06-07","2021-06-06"),(43,9,"2020-06-07","2021-01-16"),(80,7,"2020-06-07","2020-12-30"),(74,7,"2020-06-07","2021-05-25"),(51,8,"2020-06-07","2020-10-13"),(43,9,"2020-06-07","2020-07-28"),(18,8,"2020-06-07","2021-04-06"),(36,5,"2020-06-07","2021-06-04"),(38,5,"2020-06-07","2021-02-09"),(39,3,"2020-06-07","2021-01-06");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (28,8,"2020-06-07","2020-06-24"),(99,3,"2020-06-07","2020-08-16"),(61,5,"2020-06-07","2020-08-14"),(5,2,"2020-06-07","2020-11-02"),(6,9,"2020-06-07","2020-11-22"),(62,2,"2020-06-07","2020-08-15"),(8,9,"2020-06-07","2021-02-28"),(86,6,"2020-06-07","2020-08-01"),(51,3,"2020-06-07","2020-09-14"),(79,7,"2020-06-07","2021-04-27");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (43,4,"2020-06-07","2021-05-30"),(94,10,"2020-06-07","2021-05-27"),(68,6,"2020-06-07","2021-05-01"),(53,7,"2020-06-07","2020-08-17"),(41,9,"2020-06-07","2020-08-11"),(79,1,"2020-06-07","2020-10-11"),(29,10,"2020-06-07","2021-03-28"),(13,2,"2020-06-07","2021-01-29"),(67,7,"2020-06-07","2020-12-31"),(40,2,"2020-06-07","2021-05-29");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (20,4,"2020-06-07","2020-12-22"),(36,4,"2020-06-07","2021-03-03"),(12,1,"2020-06-07","2021-01-23"),(84,8,"2020-06-07","2021-04-04"),(16,4,"2020-06-07","2020-08-12"),(5,2,"2020-06-07","2020-12-15"),(70,1,"2020-06-07","2021-01-03"),(83,9,"2020-06-07","2020-11-30"),(54,1,"2020-06-07","2020-12-17"),(70,5,"2020-06-07","2020-09-25");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (52,1,"2020-06-07","2021-03-18"),(96,2,"2020-06-07","2021-02-12"),(70,9,"2020-06-07","2021-04-10"),(22,4,"2020-06-07","2020-12-05"),(76,8,"2020-06-07","2020-07-28"),(13,1,"2020-06-07","2021-02-13"),(62,5,"2020-06-07","2020-10-31"),(11,5,"2020-06-07","2020-12-31"),(28,3,"2020-06-07","2021-03-15"),(93,10,"2020-06-07","2020-12-28");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (35,2,"2020-06-07","2021-05-28"),(18,7,"2020-06-07","2020-09-12"),(22,9,"2020-06-07","2021-01-13"),(81,4,"2020-06-07","2020-11-20"),(78,1,"2020-06-07","2021-03-11"),(27,6,"2020-06-07","2021-05-27"),(22,1,"2020-06-07","2020-07-17"),(1,6,"2020-06-07","2020-08-08"),(71,9,"2020-06-07","2021-01-20"),(3,9,"2020-06-07","2020-08-24");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (65,10,"2020-06-07","2020-09-29"),(31,8,"2020-06-07","2021-05-15"),(75,5,"2020-06-07","2020-09-12"),(73,7,"2020-06-07","2020-06-15"),(69,1,"2020-06-07","2021-03-10"),(73,7,"2020-06-07","2020-07-11"),(99,3,"2020-06-07","2020-07-30"),(26,7,"2020-06-07","2020-12-20"),(1,2,"2020-06-07","2020-08-14"),(43,1,"2020-06-07","2020-10-24");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (56,3,"2020-06-07","2021-05-27"),(7,6,"2020-06-07","2021-06-04"),(33,8,"2020-06-07","2020-12-03"),(12,1,"2020-06-07","2020-11-29"),(36,3,"2020-06-07","2020-06-29"),(34,7,"2020-06-07","2021-05-13"),(7,7,"2020-06-07","2020-10-22"),(81,8,"2020-06-07","2021-01-19"),(2,5,"2020-06-07","2020-07-19"),(9,3,"2020-06-07","2021-03-11");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (70,3,"2020-06-07","2020-06-20"),(23,3,"2020-06-07","2020-08-31"),(72,5,"2020-06-07","2020-12-28"),(76,6,"2020-06-07","2020-09-30"),(1,5,"2020-06-07","2021-01-16"),(47,9,"2020-06-07","2021-05-08"),(80,1,"2020-06-07","2020-12-31"),(61,7,"2020-06-07","2020-08-17"),(51,4,"2020-06-07","2021-06-02"),(12,5,"2020-06-07","2020-11-27");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (50,8,"2020-06-07","2021-01-28"),(25,4,"2020-06-07","2020-10-07"),(14,2,"2020-06-07","2021-05-19"),(5,9,"2020-06-07","2021-03-15"),(78,6,"2020-06-07","2020-11-11"),(40,7,"2020-06-07","2020-11-17"),(30,5,"2020-06-07","2020-07-03"),(56,10,"2020-06-07","2020-08-01"),(34,1,"2020-06-07","2020-12-10"),(58,8,"2020-06-07","2020-10-03");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (11,8,"2020-06-07","2021-01-20"),(53,10,"2020-06-07","2020-09-08"),(14,8,"2020-06-07","2021-04-25"),(56,9,"2020-06-07","2020-08-17"),(67,8,"2020-06-07","2020-08-06"),(99,8,"2020-06-07","2020-06-10"),(15,8,"2020-06-07","2020-06-30"),(14,2,"2020-06-07","2021-03-09"),(68,2,"2020-06-07","2020-10-24"),(4,1,"2020-06-07","2021-05-09");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (70,3,"2020-06-07","2020-06-12"),(68,4,"2020-06-07","2020-09-15"),(98,7,"2020-06-07","2021-04-24"),(87,9,"2020-06-07","2020-08-26"),(73,5,"2020-06-07","2020-09-11"),(57,5,"2020-06-07","2020-10-23"),(42,5,"2020-06-07","2020-09-27"),(26,7,"2020-06-07","2020-07-01"),(97,4,"2020-06-07","2021-04-16"),(63,10,"2020-06-07","2021-03-10");
+INSERT INTO `certificates` (`worker_id`,`certificate_type_id`,`give_date`,`last_attestation`) VALUES (52,5,"2020-06-07","2021-02-27"),(30,5,"2020-06-07","2020-11-28"),(87,10,"2020-06-07","2020-06-13"),(4,5,"2020-06-07","2021-03-05"),(40,3,"2020-06-07","2020-10-20"),(88,3,"2020-06-07","2020-10-08"),(30,3,"2020-06-07","2020-11-10"),(7,10,"2020-06-07","2021-06-03"),(62,6,"2020-06-07","2020-08-27"),(97,10,"2020-06-07","2020-11-08");
+
+CALL update_certdates();
+DROP PROCEDURE update_certdates;
+
+INSERT IGNORE INTO `chat_ids` VALUES 
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101)),
+  (FLOOR(RAND() * 1000000), FLOOR(RAND() * 101))
+;
+
+CALL add_alarms();
+DROP PROCEDURE add_alarms;
