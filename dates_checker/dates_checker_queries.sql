@@ -77,3 +77,4 @@ SELECT departament, COUNT(marker) AS `count`, marker
   GROUP BY departament, marker
   ORDER BY departament, marker
 ;
+
