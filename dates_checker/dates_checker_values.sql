@@ -1,5 +1,12 @@
 USE dates_checker;
 
+INSERT INTO coordinators (`name`, `comment`) VALUES 
+  ("Руководитель", "Руководитель подразделения. Так же совмещает обязанности отсутствующих в подразделении должностных лиц"),
+  ("Пожарная безопасность", "Ответственный за пожарную безопасность в помещениях подразделения"),
+  ("Охрана труда", "Ответственный за безопасность выполнения работ"),
+  ("СИЗ", "Ответственный за исправность средств индивидуальной защиты")
+;
+
 INSERT INTO `departaments` (`name`,`comment`) VALUES 
   ("est.","lobortis. Class aptent taciti sociosqu"),
   ("non","vitae"),
@@ -113,9 +120,6 @@ INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (8
 INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (6,"Cruz","Gannon","F");
 INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (7,"Stein","Jael","H");
 INSERT INTO `workers` (`departament_id`,`surname`,`name`,`patronymic`) VALUES (10,"Snyder","Austin","E");
-
-CALL create_brigadiers();
-DROP PROCEDURE create_brigadiers;
 
 CALL set_brigadiers();
 DROP PROCEDURE set_brigadiers;
@@ -263,3 +267,9 @@ INSERT IGNORE INTO `chat_ids` VALUES
 
 CALL add_alarms();
 DROP PROCEDURE add_alarms;
+
+
+
+
+
+

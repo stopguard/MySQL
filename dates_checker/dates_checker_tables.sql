@@ -20,20 +20,11 @@ CREATE TABLE workers (
   `name` VARCHAR(100) NOT NULL COMMENT "Имя сотрудника",
   patronymic VARCHAR(100) NOT NULL COMMENT "Отчество сотрудника",
   brigadier_id BIGINT UNSIGNED DEFAULT NULL COMMENT "Идентификатор бригадира",
+  extra_duties_id TINYINT UNSIGNED DEFAULT NULL COMMENT "Идентификатор дополнительных обязанностей",
   KEY index_of_departament_id(departament_id),
-  FOREIGN KEY (departament_id) REFERENCES departaments(`id`)
+  FOREIGN KEY (departament_id) REFERENCES departaments(`id`),
+  FOREIGN KEY (brigadier_id) REFERENCES workers(`id`)
 ) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT "Список сотрудников";
-
-CREATE TABLE brigadiers (
-  `id` SERIAL PRIMARY KEY COMMENT "Идентификатор бригадира",
-  worker_id BIGINT UNSIGNED UNIQUE NOT NULL COMMENT "Табельный номер бригадира",
-  FOREIGN KEY (worker_id) REFERENCES workers(`id`) ON UPDATE CASCADE ON DELETE CASCADE
-) COMMENT "Список бригадиров";
-
-ALTER TABLE workers
-  ADD CONSTRAINT brigadier_id_fk
-    FOREIGN KEY (brigadier_id) REFERENCES brigadiers(`id`) 
-      ON UPDATE CASCADE ON DELETE CASCADE;
 
 CREATE TABLE item_types (
   `id` SERIAL PRIMARY KEY COMMENT "Идентификатор типа инструмента",
@@ -83,7 +74,7 @@ CREATE TABLE alarm_links (
 ) COMMENT "Список id-чатов для рассылки оповещений об истечении сроков";
 
 CREATE TABLE change_log (
-  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT "Идентификатор маркера",
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT "Идентификатор записи",
   create_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "Дата и время создания записи",
   table_name VARCHAR(20) NOT NULL DEFAULT "items" COMMENT "Таблица в которой произошли изменения",
   item_id BIGINT UNSIGNED NOT NULL COMMENT "Идентификатор предмета",
@@ -93,6 +84,17 @@ CREATE TABLE change_log (
   last_attestation DATE DEFAULT NULL COMMENT "Дата последней аттестации",
   operation VARCHAR(20) NOT NULL DEFAULT "INSERT" COMMENT "Тип изменений"
 ) ENGINE=Archive COMMENT "Лог изменений в списках выданного инструмента и удостоверений";
+
+CREATE TABLE coordinators (
+  `id` TINYINT UNSIGNED UNIQUE NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT "Идентификатор ответственного",
+  `name` VARCHAR(100) NOT NULL COMMENT "Наименование обязанности",
+  `comment` TEXT DEFAULT NULL COMMENT "Описание"
+) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT "Список типов ответственных лиц";
+
+ALTER TABLE workers 
+  ADD CONSTRAINT extra_duties_fk
+    FOREIGN KEY (extra_duties_id) REFERENCES coordinators(`id`)
+      ON UPDATE CASCADE ON DELETE CASCADE;
 
 /* TRIGGERS */
 
@@ -225,27 +227,38 @@ END//
 
 /* TEMPORARY PROCEDURES */
 
-CREATE PROCEDURE create_brigadiers()
+CREATE PROCEDURE set_brigadiers()
 BEGIN
-  DECLARE i TINYINT DEFAULT 1;
-  WHILE i < 11 DO
-    INSERT INTO brigadiers(worker_id)
-      SELECT id
+  DECLARE i TINYINT UNSIGNED DEFAULT 1;
+  DECLARE b_id BIGINT UNSIGNED;
+  DECLARE d_id BIGINT UNSIGNED;
+  DECLARE j TINYINT UNSIGNED DEFAULT 1;
+  DECLARE rnd TINYINT UNSIGNED;
+  DROP TABLE IF EXISTS brigadiers;
+  CREATE TEMPORARY TABLE brigadiers (worker_id BIGINT UNSIGNED);
+  WHILE j < 11 DO                     -- цикл для добавления бригадиров и ответственных лиц по подразделениям
+    INSERT INTO brigadiers(worker_id) -- в данном случае бригадир приравнивается к руководителю подразделения
+      SELECT id                       -- но это не обязательно должно быть так
         FROM workers
-        WHERE departament_id = i
+        WHERE departament_id = j
         ORDER BY RAND() 
         LIMIT 1
     ;
-    SET i = i + 1;
+    SET rnd = FLOOR(RAND() * 3) + 2;  -- часть отвечающая за добавление одного доп ответственного на подраделение
+    SET d_id = (SELECT w.id 
+        FROM workers w
+        LEFT JOIN brigadiers b ON w.id = b.worker_id 
+        WHERE w.departament_id = j AND b.worker_id IS NULL 
+        ORDER BY RAND() 
+        LIMIT 1);
+    UPDATE workers 
+      SET extra_duties_id = rnd
+      WHERE id = d_id
+    ;
+    SET j = j + 1;
   END WHILE;
-END//
-
-CREATE PROCEDURE set_brigadiers()
-BEGIN
-  DECLARE i TINYINT DEFAULT 1;
-  DECLARE b_id BIGINT;
   WHILE i < 101 DO
-    SET b_id = (SELECT b.id
+    SET b_id = (SELECT b.worker_id
         FROM brigadiers b 
           JOIN workers w ON b.worker_id = w.id
         WHERE departament_id = (SELECT departament_id FROM workers WHERE id = i)
@@ -253,6 +266,8 @@ BEGIN
     UPDATE workers SET brigadier_id = b_id WHERE id = i;
     SET i = i + 1;
   END WHILE;
+  UPDATE workers SET extra_duties_id = 1 WHERE id = brigadier_id; -- добавляем всех бригадиров в руководители
+  DROP TABLE IF EXISTS brigadiers;
 END//
 
 CREATE PROCEDURE update_itemdates()
@@ -313,7 +328,7 @@ DELIMITER ;
 /* VIEWS */
 
 CREATE VIEW summ_info_view AS
-  SELECT b.worker_id AS brigadier_id,
+  SELECT w.brigadier_id AS brigadier_id,
       CONCAT(w2.name, " ", w2.patronymic, " ", w2.surname) AS brigadier_name,
       marker(i.last_check, i.last_check, it.duration, it.duration) AS marker,
       i.worker_id AS worker_id,
@@ -330,13 +345,11 @@ CREATE VIEW summ_info_view AS
       LEFT JOIN 
         workers w ON i.worker_id = w.id 
       LEFT JOIN 
-        brigadiers b ON w.brigadier_id = b.id
-      LEFT JOIN 
-        workers w2 ON b.worker_id = w2.id
+        workers w2 ON w.brigadier_id = w2.id
       LEFT JOIN
         item_types it ON i.item_type_id = it.id
   UNION ALL
-    SELECT b.worker_id,
+    SELECT w.brigadier_id,
       CONCAT(w2.name, " ", w2.patronymic, " ", w2.surname),
       marker(c.give_date, c.last_attestation, ct.change_duration, ct.attestation_duration),
       c.worker_id,
@@ -353,9 +366,7 @@ CREATE VIEW summ_info_view AS
       LEFT JOIN 
         workers w ON c.worker_id = w.id 
       LEFT JOIN 
-        brigadiers b ON w.brigadier_id = b.id
-      LEFT JOIN 
-        workers w2 ON b.worker_id = w2.id
+        workers w2 ON w.brigadier_id = w2.id
       LEFT JOIN
         certificate_types ct ON c.certificate_type_id = ct.id 
 ;
